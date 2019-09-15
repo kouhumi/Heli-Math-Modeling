@@ -6,16 +6,17 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 x = []
 y = []
-for i in range(101):
+for i in range(100):
     x.append(rand.random() * 100)
     y.append(rand.random() * 100)
 plt.scatter(x, y)
-plt.show()
 
 data = list(zip(x, y))
 
-kmeans = KMeans(n_clusters = 5)
+kmeans = KMeans(n_clusters = 4)
 kmeans.fit(data)
+print(kmeans.cluster_centers_)
+
 
 cluster_x = []
 cluster_y = []
