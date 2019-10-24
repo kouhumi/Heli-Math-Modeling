@@ -11,7 +11,7 @@ plt.scatter(df.iloc[:, 0], df.iloc[:, 1])
 # complete the linear regression.
 model = linear_model.LinearRegression() 
 # array.reshape(-1,1) converts X to a column vector for X may has more than 1 dimension.
-X = np.array(df['hair']).reshape(-1, 1)
+X = np.array(df['hairs']).reshape(-1, 1)
 Y = np.array(df['bald'])
 model.fit(X, Y)
 
